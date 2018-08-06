@@ -1,0 +1,27 @@
+{
+  "name": "voucher-helper-backend",
+  "version": "1.0.0",
+  "description": "电子凭证助手-后端代码",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderMing/voucher-helper-backend.git"
+  },
+  "author": "coderming",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoderMing/voucher-helper-backend/issues"
+  },
+  "homepage": "https://github.com/CoderMing/voucher-helper-backend#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.46",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
