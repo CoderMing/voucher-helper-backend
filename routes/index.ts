@@ -14,15 +14,15 @@ export interface RouterFormat {
 
 const routerList: RouterFormat[] = [];
 
-const readRouter = async list => {
+const readRouter: (list: RouterFormat[]) => Promise<RouterFormat[]> = async list => {
   const routerFiles = fs.readdirSync(__dirname)
   for (let i = 0, length = routerFiles.length; i < length; i++) {
     let el = routerFiles[i]
     if (el === 'index.ts')
-      return void 0
-    list.push(await import(path.resolve(__dirname, el)))
+      continue
+    list.push((await import(path.resolve(__dirname, el))).default)
   }
-  return Promise.resolve(list)
+  return list
 }
 
 readRouter(routerList).then(res => res.forEach(obj => {
